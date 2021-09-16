@@ -7,7 +7,8 @@ import pygame                               # Imports pygame and other libraries
 pygame.init()                               # Pygame is initialised (starts running)
 
 screen = pygame.display.set_mode([700,500]) # Set the width and height of the screen [width,height]
-pygame.display.set_caption("My Game")       # Name your window
+pygame.display.set_caption("My Game")
+background_image = pygame.image.load(OrchardBackground.jpg).convert()
 done = False                                # Loop until the user clicks the close button.
 clock = pygame.time.Clock()                 # Used to manage how fast the screen updates
 black    = (   0,   0,   0)                 # Define some colors using rgb values.  These can be
@@ -28,4 +29,3 @@ while done == False:
     clock.tick(20)                          # Limit to 20 frames per second
 
 pygame.quit()                               # Close the window and quit.
-
